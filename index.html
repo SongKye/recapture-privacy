@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recapture Privacy Policy</title>
+<style>
+  :root {
+    --paper: #F1F3F6;
+    --surface: #FFFFFF;
+    --ink: #1A212B;
+    --ink-soft: #4B5563;
+    --muted: #6B7488;
+    --line: #DCE1E8;
+    --accent: #2954A6;
+    --accent-soft: #E8EDF7;
+    --accent-ink: #17335E;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #12161D;
+      --surface: #1A212B;
+      --ink: #ECEFF4;
+      --ink-soft: #C3CAD6;
+      --muted: #8A93A6;
+      --line: #2B3542;
+      --accent: #82AAF3;
+      --accent-soft: #1E2A40;
+      --accent-ink: #CFE0FB;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #12161D;
+    --surface: #1A212B;
+    --ink: #ECEFF4;
+    --ink-soft: #C3CAD6;
+    --muted: #8A93A6;
+    --line: #2B3542;
+    --accent: #82AAF3;
+    --accent-soft: #1E2A40;
+    --accent-ink: #CFE0FB;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4.5rem 1.75rem 6rem;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .mark {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--accent);
+    color: var(--accent-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Newsreader", Georgia, serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  h1 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 2.4rem;
+    line-height: 1.15;
+    margin: 0.1rem 0 0;
+    text-wrap: balance;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.1rem;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 3rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .lede {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    margin-bottom: 3rem;
+    max-width: 62ch;
+  }
+
+  section {
+    margin-bottom: 2.6rem;
+  }
+
+  h2 {
+    font-size: 1.02rem;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin: 0 0 1rem;
+  }
+
+  h2 .num {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  p { margin: 0 0 0.9rem; max-width: 66ch; color: var(--ink-soft); }
+  p:last-child { margin-bottom: 0; }
+
+  .tiers {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1rem 0 0;
+  }
+
+  .tier {
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    background: var(--surface);
+  }
+
+  .tier .name {
+    font-weight: 600;
+    font-size: 0.92rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .tier .name .tag {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.12rem 0.45rem;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    letter-spacing: 0.02em;
+  }
+
+  .tier p { font-size: 0.92rem; margin: 0; color: var(--muted); max-width: 60ch; }
+  .tier p + p { margin-top: 0.5rem; }
+
+  ul {
+    margin: 0.9rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  li {
+    padding-left: 1.15rem;
+    position: relative;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    font-size: 0.96rem;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  li b { color: var(--ink); font-weight: 600; }
+
+  .callout {
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    font-size: 0.92rem;
+    color: var(--accent-ink);
+    max-width: 62ch;
+  }
+
+  .callout b { font-weight: 700; }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  a { color: var(--accent); }
+
+  @media (max-width: 520px) {
+    .wrap { padding: 3rem 1.25rem 4rem; }
+    h1 { font-size: 1.95rem; }
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark">R</div>
+    <div>
+      <div class="eyebrow">Recapture</div>
+      <h1>Privacy Policy</h1>
+    </div>
+  </header>
+
+  <div class="meta">
+    <span>Effective 2026&#8209;09&#8209;11</span>
+    <span>&middot;</span>
+    <span>Applies to Recapture for Android and iOS</span>
+  </div>
+
+  <p class="lede">Recapture turns English phrases you capture — from screenshots, typed notes, or voice memos — into flashcards. This page explains exactly what the app stores, what it sends off your device, and to whom.</p>
+
+  <section>
+    <h2><span class="num">01</span>What stays on your device</h2>
+    <p>Every card you save — the phrase, its meaning, example sentences, tags, and your review history — lives in a local SQLite database inside the app. None of it is uploaded anywhere as part of normal use. There is no account, no login, and no profile — you never enter a name, email, or password anywhere in the app.</p>
+    <p>Uninstalling the app deletes this data permanently. There is no cloud backup unless your device's own OS-level app-data backup (Android auto-backup / iCloud) is enabled — that's between you and your device maker, not Recapture.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>What happens when you capture something</h2>
+    <p>Recapture supports three ways to bring in a phrase, and each has a different data path:</p>
+    <ul>
+      <li><b>Screenshot share</b> — an image is read from your photo library only when you explicitly share it into the app or pick it from the gallery. Recapture never scans your photo library in the background.</li>
+      <li><b>Typed note</b> — the text you type is processed the same way as any other capture, per the AI tier below.</li>
+      <li><b>Voice memo</b> — audio is transcribed to text using your device's own on-device or OS-level speech recognizer (Android's <code>SpeechRecognizer</code> / iOS's Speech framework). Recapture itself does not record, store, or transmit raw audio.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>How your capture gets turned into a card</h2>
+    <p>You choose how phrase extraction and enrichment (meaning, nuance, example sentences) are generated, in Settings. This choice determines where your captured text or screenshot is sent:</p>
+    <div class="tiers">
+      <div class="tier">
+        <div class="name">Default <span class="tag">free, on by default</span></div>
+        <p>Your captured text or screenshot is sent to a Recapture-operated relay, which forwards it to one of a small pool of third-party AI providers (currently Google Gemini and Groq) to generate the card content, then returns the result to your device. The relay does not store your capture after the request completes.</p>
+        <p>To keep this free tier from being drained by scripts instead of real app users, each install is issued an anonymous device identifier (via Firebase Authentication's anonymous sign-in — no name, email, or personal info attached) and a device-attestation token (via Google Play Integrity on Android) sent with each request. Neither identifies you personally; both exist solely to confirm a request came from a real, unmodified copy of the app and to apply a fair-use limit per install.</p>
+      </div>
+      <div class="tier">
+        <div class="name">Bring your own key <span class="tag">your provider</span></div>
+        <p>Your captured text and API key are sent directly from your device to the AI provider you configured (OpenAI, Gemini, or Anthropic). Recapture never sees or stores your key on any server — it's kept in encrypted local storage on your device. Your data is subject to that provider's own privacy policy.</p>
+      </div>
+      <div class="tier">
+        <div class="name">On-device <span class="tag">local only, not yet available</span></div>
+        <p>Processed entirely on your phone using platform ML frameworks (ML Kit / Apple Intelligence). Nothing leaves the device. Not yet available in this build.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>What Recapture never does</h2>
+    <ul>
+      <li>No advertising SDKs, and no ad tracking.</li>
+      <li>No analytics or crash-reporting SDKs that phone home with usage data.</li>
+      <li>No selling, renting, or sharing of your captures with third parties beyond the AI tier you're using to process that specific request.</li>
+      <li>No background access to your photos, microphone, or contacts — every capture is something you initiated.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>Permissions the app requests</h2>
+    <ul>
+      <li><b>Notifications</b> — used only to remind you about local, on-device spaced-repetition reviews. No push server is involved.</li>
+      <li><b>Microphone</b> — used only while you're actively recording a voice memo, and only to feed the OS speech recognizer described above.</li>
+      <li><b>Photos</b> — used only when you actively share or pick an image into the app.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>Your choices</h2>
+    <p>You can delete any card at any time from within the app. You can switch AI tiers, or remove a stored API key, from Settings at any time. Uninstalling the app removes all locally stored data immediately, including the anonymous device identifier described above (a reinstall gets a new one).</p>
+    <div class="callout">If you have questions about how the default-tier relay handles a specific request, contact the developer using the details below.</div>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>Changes to this policy</h2>
+    <p>If Recapture's data practices change — for example, when on-device processing ships, or the pool of default-tier AI providers changes — this page will be updated and the effective date above will change accordingly.</p>
+  </section>
+
+  <footer>
+    Questions about this policy? Contact the developer at <a href="mailto:kjsong1117@gmail.com">kjsong1117@gmail.com</a>.
+  </footer>
+</div>
+</body>
+</html>
